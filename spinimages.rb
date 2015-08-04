@@ -25,12 +25,10 @@ class Spinimages < Proxy::Module
   100%   { -webkit-transform: rotate(360deg); }
 }
 
-/*
-  Spin all images
-*/ 
+
 img {
   -webkit-animation: spin 1s linear infinite;
-  animation: spin 1s linear infinite;*/
+  -animation: spin 1s linear infinite;
 }
 
 </style>

@@ -16,15 +16,13 @@ class FlipImages < Proxy::Module
       Logger.info "Hacking http://#{request.host}#{request.url} title tag"
       # make sure to use sub! or gsub! to update the instance
       response.body.sub!( '</head>', '</head> <style>
--/*
--  Flip all images upside down
--*/
+
 -img {
--  -webkit-transform: rotate(180deg);
--  transform: rotate(180deg);*/
--}
--
--</style>' )
+  -webkit-transform: rotate(180deg);
+  -transform: rotate(180deg);
+}
+
+</style>' )
     end
   end
 end
