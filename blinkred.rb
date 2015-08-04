@@ -15,7 +15,7 @@ class Blinkred < Proxy::Module
     if response.content_type =~ /^text\/html.*/
       Logger.info "Hacking http://#{request.host}#{request.url} title tag"
       # make sure to use sub! or gsub! to update the instance
-      response.body.sub!( '</head>', '</head> // Text is blinking red and black
+      response.body.sub!( '</head>', '</head>
 
 <script type="text/javascript">
 window.onload=function() {
